@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "multitool-71fff": {
+      "hosting": {
+        "my-app": [
+          "multitool-71fff"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "multitool-71fff"
+  }
+}

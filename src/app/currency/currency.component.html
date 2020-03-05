@@ -1,0 +1,56 @@
+<div class="container">
+    <div class="d-md-flex justify-content-center mt-5">
+        <div class="mr-md-5">
+            <p>Wpisz kwotę którą chcesz wymienić:</p>
+            <input placeholder="*Kwota" class="w-100 form-control" [(ngModel)]="userCurrency" (keypress)="onInputKeyDown($event)">
+        </div>
+        <div>
+            <p>Wybierz walutę którą chcesz wymienić:</p>
+            <select  class="w-50 form-control" [(ngModel)]="userInput" (change)="inputChange()">
+                <option *ngFor="let curr of currency">{{curr}}</option>
+            </select>
+        </div>
+    </div>
+    <div class="row mt-5">
+        <div class="mt-5 col-sm-12 col-md-6 col-lg-3" *ngIf="display">
+            <p>{{currencies.rates.USD*userCurrency | currency:'USD'}}</p>
+            <p>{{currencies.rates.EUR*userCurrency | currency:'EUR'}}</p>
+            <p>{{currencies.rates.JPY*userCurrency | currency:'JPY'}}</p>
+            <p>{{currencies.rates.GBP*userCurrency | currency:'GBP'}}</p>
+            <p>{{currencies.rates.AUD*userCurrency | currency:'AUD'}}</p>
+            <p>{{currencies.rates.CAD*userCurrency | currency:'CAD'}}</p>
+            <p>{{currencies.rates.CHF*userCurrency | currency:'CHF'}}</p>
+            <p>{{currencies.rates.SEK*userCurrency | currency:'SEK'}}</p>
+        </div>
+        <div class="mt-5 col-sm-12 col-md-6 col-lg-3" *ngIf="display">
+            <p>{{currencies.rates.PLN*userCurrency | currency:'PLN'}}</p>
+            <p>{{currencies.rates.RUB*userCurrency | currency:'RUB'}}</p>
+            <p>{{currencies.rates.HRK*userCurrency | currency:'HRK'}}</p>
+            <p>{{currencies.rates.HKD*userCurrency | currency:'HKD'}}</p>
+            <p>{{currencies.rates.THB*userCurrency | currency:'THB'}}</p>
+            <p>{{currencies.rates.CZK*userCurrency | currency:'CZK'}}</p>
+            <p>{{currencies.rates.MYR*userCurrency | currency:'MYR'}}</p>
+            <p>{{currencies.rates.BGN*userCurrency | currency:'BGN'}}</p>
+        </div>
+        <div class="mt-5 col-sm-12 col-md-6 col-lg-3" *ngIf="display">
+            <p>{{currencies.rates.ISK*userCurrency | currency:'ISK'}}</p>
+            <p>{{currencies.rates.INR*userCurrency | currency:'INR'}}</p>
+            <p>{{currencies.rates.BRL*userCurrency | currency:'BRL'}}</p>
+            <p>{{currencies.rates.NOK*userCurrency | currency:'NOK'}}</p>
+            <p>{{currencies.rates.NZD*userCurrency | currency:'NZD'}}</p>
+            <p>{{currencies.rates.ZAR*userCurrency | currency:'ZAR'}}</p>
+            <p>{{currencies.rates.MXN*userCurrency | currency:'MXN'}}</p>
+            <p>{{currencies.rates.SGD*userCurrency | currency:'SGD'}}</p>
+        </div>
+        <div class="mt-5 col-sm-12 col-md-6 col-lg-3" *ngIf="display">
+            <p>{{currencies.rates.RON*userCurrency | currency:'RON'}}</p>
+            <p>{{currencies.rates.DKK*userCurrency | currency:'DKK'}}</p>
+            <p>{{currencies.rates.HUF*userCurrency | currency:'HUF'}}</p>
+            <p>{{currencies.rates.CNY*userCurrency | currency:'CNY'}}</p>
+            <p>{{currencies.rates.IDR*userCurrency | currency:'IDR'}}</p>
+            <p>{{currencies.rates.ILS*userCurrency | currency:'ILS'}}</p>
+            <p>{{currencies.rates.KRW*userCurrency | currency:'KRW'}}</p>
+            <p>{{currencies.rates.TRY*userCurrency | currency:'TRY'}}</p>
+        </div>
+    </div>
+</div>

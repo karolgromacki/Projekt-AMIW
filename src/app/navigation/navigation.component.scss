@@ -1,0 +1,25 @@
+
+$white-color:white;
+.navbar {
+  background: #222222;
+  &::after {
+    transition: 1.2s;
+  }
+}
+.nav-item {
+  &::after {
+    content: "";
+    display: block;
+    width: 0px;
+    height: 2px;
+    background: $white-color;
+    transition: 0.2s;
+  }
+  &:hover::after {
+    width: 100%;
+  }
+}
+.nav-link {
+  padding: 15px 5px;
+  transition: 0.2s;
+}

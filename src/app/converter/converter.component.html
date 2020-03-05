@@ -1,0 +1,28 @@
+<div class="d-flex justify-content-center">
+    <div class="mt-5">
+        <div>
+            <p>Bajt [B]</p>
+            <input class="form-control" type="number" placeholder="*Bajt" maxlength="19" (keyup)="convertBajt($event)" [(ngModel)]="BInput">
+        </div>
+        <div>
+            <p>Kilobajt [KB]</p>
+            <input class="form-control" type="number" placeholder="*Kilobajt" maxlength="19" (keyup)="convertKilobajt($event)"
+                [(ngModel)]="KBInput">
+        </div>
+        <div>
+            <p>Megabajt [MB]</p>
+            <input class="form-control" type="number" placeholder="*Megabajt" maxlength="19" (keyup)="convertMegabajt($event)"
+                [(ngModel)]="MBInput">
+        </div>
+        <div>
+            <p>Gigabajt [GB]</p>
+            <input class="form-control" type="number" placeholder="*Gigabajt" maxlength="19" (keyup)="convertGigabajt($event)"
+                [(ngModel)]="GBInput">
+        </div>
+        <div>
+            <p>Terabajt [TB]</p>
+            <input class="form-control" type="number" placeholder="*Terabajt" maxlength="19" (keyup)="convertTerabajt($event)"
+                [(ngModel)]="TBInput">
+        </div>
+    </div>
+</div>

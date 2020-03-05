@@ -1,0 +1,16 @@
+
+.panel {
+  opacity: 0.8;
+  transition: 0.2s;
+  color: white;
+  :hover {
+    opacity: 1;
+  }
+}
+footer {
+  position: relative;
+  margin-top: 17vh;
+  bottom: 0px;
+  text-decoration: none;
+  color: rgb(196, 196, 196);
+}
