@@ -1,28 +1,39 @@
 <div class="d-flex justify-content-center">
     <div class="mt-5">
         <div>
-            <p>Bajt [B]</p>
-            <input class="form-control" type="number" placeholder="*Bajt" maxlength="19" (keyup)="convertBajt($event)" [(ngModel)]="BInput">
+            <p class="mb-0 mt-4">Bajt [B]</p>
+            <input class="form-control d-inline-block col-9" type="number" placeholder="*Bajt" maxlength="10" (keyup)="convertBajt($event)"
+                [(ngModel)]="BInput" #userinputB>
+            <button class="btn btn-dark d-inline-block" title="Kopiuj" (click)="copyInputMessage(userinputB)" value="click to copy"><i
+                    class="demo-icon icon-docs"></i></button>
         </div>
         <div>
-            <p>Kilobajt [KB]</p>
-            <input class="form-control" type="number" placeholder="*Kilobajt" maxlength="19" (keyup)="convertKilobajt($event)"
-                [(ngModel)]="KBInput">
+            <p class="mb-0 mt-4">Kilobajt [KB]</p>
+            <input class="form-control d-inline-block col-9" type="number" placeholder="*Kilobajt" maxlength="10"
+                (keyup)="convertKilobajt($event)" [(ngModel)]="KBInput" #userinputKB>
+            <button class="btn btn-dark d-inline-block" title="Kopiuj" (click)="copyInputMessage(userinputKB)" value="click to copy"><i
+                    class="demo-icon icon-docs"></i></button>
+
         </div>
         <div>
-            <p>Megabajt [MB]</p>
-            <input class="form-control" type="number" placeholder="*Megabajt" maxlength="19" (keyup)="convertMegabajt($event)"
-                [(ngModel)]="MBInput">
+            <p class="mb-0 mt-4">Megabajt [MB]</p>
+            <input class="form-control d-inline-block col-9" type="number" placeholder="*Megabajt" maxlength="10"
+                (keyup)="convertMegabajt($event)" [(ngModel)]="MBInput" #userinputMB>
+            <button class="btn btn-dark d-inline-block" title="Kopiuj" (click)="copyInputMessage(userinputMB)" value="click to copy"><i
+                    class="demo-icon icon-docs"></i></button>
         </div>
         <div>
-            <p>Gigabajt [GB]</p>
-            <input class="form-control" type="number" placeholder="*Gigabajt" maxlength="19" (keyup)="convertGigabajt($event)"
-                [(ngModel)]="GBInput">
+            <p class="mb-0 mt-4">Gigabajt [GB]</p>
+            <input class="form-control d-inline-block col-9" type="number" placeholder="*Gigabajt" maxlength="10"
+                (keyup)="convertGigabajt($event)" [(ngModel)]="GBInput" #userinputGB>
+            <button class="btn btn-dark d-inline-block" title="Kopiuj" (click)="copyInputMessage(userinputGB)" value="click to copy"><i
+                    class="demo-icon icon-docs"></i></button>
         </div>
         <div>
-            <p>Terabajt [TB]</p>
-            <input class="form-control" type="number" placeholder="*Terabajt" maxlength="19" (keyup)="convertTerabajt($event)"
-                [(ngModel)]="TBInput">
+            <p class="mb-0 mt-4">Terabajt [TB]</p>
+            <input class="form-control d-inline-block col-9" type="number" placeholder="*Terabajt" maxlength="10"
+                (keyup)="convertTerabajt($event)" [(ngModel)]="TBInput" #userinputTB>
+            <button class="btn btn-dark d-inline-block" title="Kopiuj" (click)="copyInputMessage(userinputTB)" value="click to copy"><i
+                    class="demo-icon icon-docs"></i></button>
         </div>
     </div>
-</div>

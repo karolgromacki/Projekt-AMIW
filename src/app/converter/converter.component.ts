@@ -18,7 +18,11 @@ export class ConverterComponent implements OnInit {
 
   ngOnInit(): void {
   }
-
+  copyInputMessage(inputElement) {
+    inputElement.select();
+    document.execCommand('copy');
+    inputElement.setSelectionRange(0, 0);
+  }
   convertBajt(event) {
 
     if (!event.key.match('[0-9]'))

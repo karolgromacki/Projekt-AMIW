@@ -36,13 +36,14 @@ export class CurrencyComponent implements OnInit {
   }
 
   ngOnInit() {
-
-  }
-  inputChange() {
+    this.userInput="PLN"
     if (this.userCurrency == null)
-      this.userCurrency = "1";
+    this.userCurrency = "1";
     this._currencyService.getCurrency(this.url + this.userInput).subscribe(data => this.currencies = data);
     this.display = true;
+  }
+  inputChange() {
+    this._currencyService.getCurrency(this.url + this.userInput).subscribe(data => this.currencies = data);
   }
 }
 

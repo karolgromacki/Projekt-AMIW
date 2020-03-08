@@ -2,7 +2,7 @@
     <div class="d-md-flex justify-content-center mt-5">
         <div class="mr-md-5">
             <p>Wpisz kwotę którą chcesz wymienić:</p>
-            <input placeholder="*Kwota" class="w-100 form-control" [(ngModel)]="userCurrency" (keypress)="onInputKeyDown($event)">
+            <input type="number" placeholder="*Kwota" class="w-100 form-control" [(ngModel)]="userCurrency" (keypress)="onInputKeyDown($event)">
         </div>
         <div>
             <p>Wybierz walutę którą chcesz wymienić:</p>
