@@ -1,0 +1,22 @@
+{
+    "navi": {
+        "calc": "Kalkulator",
+        "curr": "Przelicznik walut",
+        "conv": "Konwerter jednostek pamięci"
+    },
+    "curr": {
+        "text":"Wpisz kwotę którą chcesz wymienić:",
+        "text2":"Wybierz walutę którą chcesz wymienić:"
+    },
+    "conv":
+    {
+        "text":"Bajt [B]",
+        "text2":"Kilobajt [KB]",
+        "text3":"Megabajt [MB]",
+        "text4":"Gigabajt [GB]",
+        "text5":"Terabajt [TB]"
+    },
+    "home": {
+        "text": "Wielofunkcjyna platforma umożliwiająca dostęp do narzędzi: Kalkulator, Konwerter jednostek, Przelicznik walut"
+    }
+}

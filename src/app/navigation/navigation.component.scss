@@ -1,5 +1,4 @@
-
-$white-color:white;
+$white-color: white;
 .navbar {
   background: #222222;
   &::after {
@@ -21,5 +20,13 @@ $white-color:white;
 }
 .nav-link {
   padding: 15px 5px;
+  transition: 0.2s;
+}
+img{
+  filter: grayscale(50%);
+  transition: 0.2s;
+}
+img:hover{
+  filter: grayscale(0%);
   transition: 0.2s;
 }

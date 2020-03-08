@@ -1,0 +1,21 @@
+{
+    "navi": {
+        "calc": "Calculator",
+        "curr": "Currency converter",
+        "conv": "Memory unit converter"
+    },
+    "curr": {
+        "text": "Enter the amount you want to exchange:",
+        "text2": "Choose the currency you want to exchange:"
+    },
+    "conv": {
+        "text": "Byte [B]",
+        "text2": "Kilobyte [KB]",
+        "text3": "Megabyte [MB]",
+        "text4": "Gigabyte [GB]",
+        "text5": "Terabyte [TB]"
+    },
+    "home": {
+        "text": "A multi-functional platform that provides access to the following tools: Calculator, Unit Converter, Currency Converter"
+    }
+}

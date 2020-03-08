@@ -8,15 +8,27 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <a class="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show" routerLink="/calculator" routerLinkActive="active">Kalkulator</a>
+        <a class="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show" routerLink="/calculator"
+          routerLinkActive="active" translate>navi.calc</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show" routerLink="/currency" routerLinkActive="active">Przelicznik walut</a>
+        <a class="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show" routerLink="/currency"
+          routerLinkActive="active" translate>navi.curr</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show" routerLink="/converter" routerLinkActive="active">Konwerter jednostek pamięci</a>
+        <a class="nav-link" data-toggle="collapse" data-target=".navbar-collapse.show" routerLink="/converter"
+          routerLinkActive="active" translate>navi.conv</a>
       </li>
     </ul>
-    <a class="nav-link text-light" href="https://github.com/karolgromacki" target="_blank"><i class="demo-icon icon-calcgithub-circled"></i></a>    
+    <a title="github" class="nav-link text-light" href="https://github.com/karolgromacki" target="_blank"><i
+        class="demo-icon icon-calcgithub-circled"></i></a>
+    <a *ngIf="trans; then thenBlock; else elseBlock"></a>
+    <ng-template #thenBlock>
+      <img class="p-2 mb-1" src="../../assets/data/PL.png" (click)="useLanguage('pl')">
+    </ng-template>
+    <ng-template #elseBlock>
+      <img class="p-2 mb-1" src="../../assets/data/GB.png" (click)="useLanguage('en')">
+    </ng-template>
+
   </div>
 </nav>
