@@ -1,5 +1,5 @@
 <nav class="sticky-top navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="#"><i class="demo-icon icon-calchome"></i></a>
+  <a class="navbar-brand" routerLink="/home"><i class="demo-icon icon-calchome"></i></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -20,14 +20,14 @@
           routerLinkActive="active" translate>navi.conv</a>
       </li>
     </ul>
-    <a title="github" class="nav-link text-light" href="https://github.com/karolgromacki" target="_blank"><i
+    <a title="github" class="nav-link text-light" href="https://github.com/karolgromacki/Projekt-AMIW" target="_blank"><i
         class="demo-icon icon-calcgithub-circled"></i></a>
-    <a *ngIf="trans; then thenBlock; else elseBlock"></a>
+    <img *ngIf="trans; then thenBlock; else elseBlock">
     <ng-template #thenBlock>
-      <img class="p-2 mb-1" src="../../assets/data/PL.png" (click)="useLanguage('pl')">
+      <img class="p-2 mb-1 btn" src="../../assets/data/PL.png" (click)="useLanguage('pl')" data-toggle="collapse" data-target="#navbarSupportedContent">
     </ng-template>
     <ng-template #elseBlock>
-      <img class="p-2 mb-1" src="../../assets/data/GB.png" (click)="useLanguage('en')">
+      <img class="p-2 mb-1 btn" src="../../assets/data/GB.png" (click)="useLanguage('en')" data-toggle="collapse" data-target="#navbarSupportedContent">
     </ng-template>
 
   </div>

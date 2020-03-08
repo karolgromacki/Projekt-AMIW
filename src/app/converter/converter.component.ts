@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import * as copy from 'copy-to-clipboard';
 
 @Component({
   selector: 'app-converter',
@@ -18,10 +19,10 @@ export class ConverterComponent implements OnInit {
 
   ngOnInit(): void {
   }
-  copyInputMessage(inputElement) {
-    inputElement.select();
-    document.execCommand('copy');
-    inputElement.setSelectionRange(0, 0);
+  copyInputMessage(id) {
+    // inputElement.select();
+    // document.execCommand('copy');
+    copy((<HTMLInputElement>document.getElementById(id)).value);
   }
   convertBajt(event) {
 

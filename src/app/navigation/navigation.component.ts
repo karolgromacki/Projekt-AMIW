@@ -17,9 +17,9 @@ export class NavigationComponent implements OnInit {
   useLanguage(language: string) {
     this.translate.use(language);
     if (language == 'en') {
-    this.trans=true;
+      this.trans = true;
     }
     else
-    this.trans=false;
+      this.trans = false;
   }
 }

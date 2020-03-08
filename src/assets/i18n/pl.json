@@ -5,18 +5,22 @@
         "conv": "Konwerter jednostek pamięci"
     },
     "curr": {
-        "text":"Wpisz kwotę którą chcesz wymienić:",
-        "text2":"Wybierz walutę którą chcesz wymienić:"
+        "text": "Wpisz kwotę którą chcesz wymienić:",
+        "text2": "Wybierz walutę którą chcesz wymienić:"
     },
-    "conv":
-    {
-        "text":"Bajt [B]",
-        "text2":"Kilobajt [KB]",
-        "text3":"Megabajt [MB]",
-        "text4":"Gigabajt [GB]",
-        "text5":"Terabajt [TB]"
+    "conv": {
+        "text": "Bajt [B]",
+        "text2": "Kilobajt [KB]",
+        "text3": "Megabajt [MB]",
+        "text4": "Gigabajt [GB]",
+        "text5": "Terabajt [TB]",
+        "copy": "Kopiuj"
     },
     "home": {
-        "text": "Wielofunkcjyna platforma umożliwiająca dostęp do narzędzi: Kalkulator, Konwerter jednostek, Przelicznik walut"
+        "text": "Platforma umożliwiająca dostęp do narzędzi: Kalkulator, Konwerter jednostek, Przelicznik walut."
+    },
+    "not-found": {
+        "text": "Co Ty tu robisz? Tu nic nie ma.",
+        "button": "Wynosze się stąd!"
     }
 }

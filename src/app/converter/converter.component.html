@@ -3,37 +3,37 @@
         <div>
             <p class="mb-0 mt-4" translate>conv.text</p>
             <input class="form-control d-inline-block col-9" type="number" placeholder="*{{'conv.text'|translate}}" maxlength="10" (keyup)="convertBajt($event)"
-                [(ngModel)]="BInput" #userinputB>
-            <button class="btn btn-dark d-inline-block" title="Kopiuj" (click)="copyInputMessage(userinputB)" value="click to copy"><i
+                [(ngModel)]="BInput" id="userinputB">
+            <button class="btn btn-dark d-inline-block mb-1 p-2" title="{{'conv.copy'|translate}}" (click)="copyInputMessage('userinputB')"><i
                     class="demo-icon icon-docs"></i></button>
         </div>
         <div>
             <p class="mb-0 mt-4" translate>conv.text2</p>
             <input class="form-control d-inline-block col-9" type="number" placeholder="*{{'conv.text2'|translate}}" maxlength="10"
-                (keyup)="convertKilobajt($event)" [(ngModel)]="KBInput" #userinputKB>
-            <button class="btn btn-dark d-inline-block" title="Kopiuj" (click)="copyInputMessage(userinputKB)" value="click to copy"><i
+                (keyup)="convertKilobajt($event)" [(ngModel)]="KBInput" id="userinputKB">
+            <button class="btn btn-dark d-inline-block mb-1 p-2" title="{{'conv.copy'|translate}}" (click)="copyInputMessage('userinputKB')"><i
                     class="demo-icon icon-docs"></i></button>
 
         </div>
         <div>
             <p class="mb-0 mt-4" translate>conv.text3</p>
             <input class="form-control d-inline-block col-9" type="number" placeholder="*{{'conv.text3'|translate}}" maxlength="10"
-                (keyup)="convertMegabajt($event)" [(ngModel)]="MBInput" #userinputMB>
-            <button class="btn btn-dark d-inline-block" title="Kopiuj" (click)="copyInputMessage(userinputMB)" value="click to copy"><i
+                (keyup)="convertMegabajt($event)" [(ngModel)]="MBInput" id="userinputMB">
+            <button class="btn btn-dark d-inline-block mb-1 p-2" title="{{'conv.copy'|translate}}" (click)="copyInputMessage('userinputMB')"><i
                     class="demo-icon icon-docs"></i></button>
         </div>
         <div>
             <p class="mb-0 mt-4" translate>conv.text4</p>
             <input class="form-control d-inline-block col-9" type="number" placeholder="*{{'conv.text4'|translate}}" maxlength="10"
-                (keyup)="convertGigabajt($event)" [(ngModel)]="GBInput" #userinputGB>
-            <button class="btn btn-dark d-inline-block" title="Kopiuj" (click)="copyInputMessage(userinputGB)" value="click to copy"><i
+                (keyup)="convertGigabajt($event)" [(ngModel)]="GBInput" id="userinputGB">
+            <button class="btn btn-dark d-inline-block mb-1 p-2" title="{{'conv.copy'|translate}}" (click)="copyInputMessage('userinputGB')"><i
                     class="demo-icon icon-docs"></i></button>
         </div>
         <div>
             <p class="mb-0 mt-4" translate>conv.text5</p>
             <input class="form-control d-inline-block col-9" type="number" placeholder="*{{'conv.text5'|translate}}" maxlength="10"
-                (keyup)="convertTerabajt($event)" [(ngModel)]="TBInput" #userinputTB>
-            <button class="btn btn-dark d-inline-block" title="Kopiuj" (click)="copyInputMessage(userinputTB)" value="click to copy"><i
+                (keyup)="convertTerabajt($event)" [(ngModel)]="TBInput" id="userinputB">
+            <button class="btn btn-dark d-inline-block mb-1 p-2" title="{{'conv.copy'|translate}}" (click)="copyInputMessage('userinputTB')"><i
                     class="demo-icon icon-docs"></i></button>
         </div>
     </div>

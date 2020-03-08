@@ -13,9 +13,14 @@
         "text2": "Kilobyte [KB]",
         "text3": "Megabyte [MB]",
         "text4": "Gigabyte [GB]",
-        "text5": "Terabyte [TB]"
+        "text5": "Terabyte [TB]",
+        "copy": "Copy"
     },
     "home": {
-        "text": "A multi-functional platform that provides access to the following tools: Calculator, Unit Converter, Currency Converter"
+        "text": "A platform that provides access to the following tools: Calculator, Unit Converter, Currency Converter"
+    },
+    "not-found": {
+        "text": "Lost your way?",
+        "button": "Go back home"
     }
 }
