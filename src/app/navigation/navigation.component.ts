@@ -8,6 +8,7 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class NavigationComponent implements OnInit {
   public trans = false;
+  public wonderId = "PL";
   constructor(private translate: TranslateService) {
     translate.setDefaultLang('pl');
   }

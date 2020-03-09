@@ -2,28 +2,36 @@
     <div class="d-md-flex justify-content-center mt-5">
         <div class="mr-md-5">
             <p translate>curr.text</p>
-            <input type="number" placeholder="*Kwota" class="w-100 form-control" [(ngModel)]="userCurrency" (keypress)="onInputKeyDown($event)">
+            <input type="text" placeholder="*Kwota" class="w-100 form-control" [(ngModel)]="userCurrency" digitOnly
+                decimal="true" inputmode="numeric" decimalSeparator="." pattern="[0-9]+([,][0-9]+)?" maxlength="10">
         </div>
         <div>
             <p translate>curr.text2</p>
-            <select  class="w-50 form-control" [(ngModel)]="userInput" (change)="inputChange()">
+            <select class="w-50 form-control" [(ngModel)]="userInput" (change)="inputChange()">
                 <option *ngFor="let curr of currency">{{curr}}</option>
             </select>
         </div>
     </div>
-    <div class="row mt-5">
-        <div class="mt-5 col-sm-12 col-md-6 col-lg-3" *ngIf="display">
+    <div class="row mt-5 pl-md-4">
+        <div class="mt-5  col-6 col-lg-3" *ngIf="display">
             <p>{{currencies.rates.USD*userCurrency | currencySpace:'USD'}}</p>
-            <p>{{currencies.rates.EUR*userCurrency | currencySpace:'EUR'}}</p>
+            <p *ngIf="userInput=='EUR'; then thenBlock; else elseBlock"></p>
+            <ng-template #thenBlock>
+                <p>{{userCurrency | currencySpace:'EUR'}}</p>
+            </ng-template>
+            <ng-template #elseBlock>
+                <p>{{currencies.rates.EUR*userCurrency | currencySpace:'EUR'}}</p>
+            </ng-template>
+            <p>{{currencies.rates.PLN*userCurrency | currencySpace:'PLN'}}</p>
             <p>{{currencies.rates.JPY*userCurrency | currencySpace:'JPY'}}</p>
             <p>{{currencies.rates.GBP*userCurrency | currencySpace:'GBP'}}</p>
             <p>{{currencies.rates.AUD*userCurrency | currencySpace:'AUD'}}</p>
             <p>{{currencies.rates.CAD*userCurrency | currencySpace:'CAD'}}</p>
             <p>{{currencies.rates.CHF*userCurrency | currencySpace:'CHF'}}</p>
-            <p>{{currencies.rates.SEK*userCurrency | currencySpace:'SEK'}}</p>
+
         </div>
-        <div class="mt-5 col-sm-12 col-md-6 col-lg-3" *ngIf="display">
-            <p>{{currencies.rates.PLN*userCurrency | currencySpace:'PLN'}}</p>
+        <div class="mt-5 col-6 col-lg-3" *ngIf="display">
+            <p>{{currencies.rates.SEK*userCurrency | currencySpace:'SEK'}}</p>
             <p>{{currencies.rates.RUB*userCurrency | currencySpace:'RUB'}}</p>
             <p>{{currencies.rates.HRK*userCurrency | currencySpace:'HRK'}}</p>
             <p>{{currencies.rates.HKD*userCurrency | currencySpace:'HKD'}}</p>
@@ -32,7 +40,7 @@
             <p>{{currencies.rates.MYR*userCurrency | currencySpace:'MYR'}}</p>
             <p>{{currencies.rates.BGN*userCurrency | currencySpace:'BGN'}}</p>
         </div>
-        <div class="mt-5 col-sm-12 col-md-6 col-lg-3" *ngIf="display">
+        <div class="mt-5 col-6 col-lg-3" *ngIf="display">
             <p>{{currencies.rates.ISK*userCurrency | currencySpace:'ISK'}}</p>
             <p>{{currencies.rates.INR*userCurrency | currencySpace:'INR'}}</p>
             <p>{{currencies.rates.BRL*userCurrency | currencySpace:'BRL'}}</p>
@@ -42,7 +50,7 @@
             <p>{{currencies.rates.MXN*userCurrency | currencySpace:'MXN'}}</p>
             <p>{{currencies.rates.SGD*userCurrency | currencySpace:'SGD'}}</p>
         </div>
-        <div class="mt-5 col-sm-12 col-md-6 col-lg-3" *ngIf="display">
+        <div class="mt-5 col-6 col-lg-3" *ngIf="display">
             <p>{{currencies.rates.RON*userCurrency | currencySpace:'RON'}}</p>
             <p>{{currencies.rates.DKK*userCurrency | currencySpace:'DKK'}}</p>
             <p>{{currencies.rates.HUF*userCurrency | currencySpace:'HUF'}}</p>

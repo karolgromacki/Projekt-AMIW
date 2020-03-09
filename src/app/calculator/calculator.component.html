@@ -2,8 +2,8 @@
     <div class="mt-5">
         <a class="history" (click)="toCalc()">{{history}}</a>
         <div>
-            <input readonly type="number" class="my-2 form-control" type="text" maxlength="20" [(ngModel)]="stringValue"
-                (keypress)="onInputKeyDown($event)">
+            <input type="text" class="my-2 form-control" type="text" maxlength="20" [(ngModel)]="stringValue"
+                (keypress)="onInputKeyDown($event)" digitOnly inputmode="numeric" decimal="true" decimalSeparator="." pattern="[0-9]+([,][0-9]+)?" maxlength="19">
         </div>
         <div class="btn-group d-flex justify-content-center" role="group" aria-label="First group">
             <button type="button" class="btn btn-dark" type="button" class="btn btn-dark"

@@ -25,8 +25,8 @@ $white-color: white;
 img{
   filter: grayscale(50%);
   transition: 0.2s;
-}
-img:hover{
-  filter: grayscale(0%);
-  transition: 0.2s;
+  &:hover{
+    filter: grayscale(0%);
+    transition: 0.2s;
+  }
 }

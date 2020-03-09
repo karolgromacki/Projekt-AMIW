@@ -22,15 +22,18 @@ export class CalculatorComponent implements OnInit {
   }
 
   onInputKeyDown(event) {
-    if (this.stringValue == "0") this.stringValue = "";
-    if (!event.key.match('[0-9]'))
-      event.preventDefault();
+    if (this.stringValue == "0")
+      this.stringValue = "";
+    if (this.stringValue.includes(".")) {
+      this.operator = true;
+    }
   }
 
   onDigitClick(event) {
 
     if (this.stringValue == "0") this.stringValue = "";
-    this.stringValue += event.target.value;
+    if (this.stringValue.length < 19)
+      this.stringValue += event.target.value;
   }
 
   onDotClick() {
@@ -42,6 +45,10 @@ export class CalculatorComponent implements OnInit {
   }
   onOperandClick(event) {
     this.last = this.stringValue.substr(this.stringValue.length - 1);
+    if (this.stringValue == "" && event.target.value == "-") {
+      this.stringValue += event.target.value;
+      this.operator = false;
+    }
     if (this.stringValue != "" && this.last.match('[0-9]')) {
       this.stringValue += event.target.value;
       this.operator = false;

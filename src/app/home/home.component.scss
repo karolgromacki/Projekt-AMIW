@@ -1,10 +1,29 @@
-
-.panel {
-  opacity: 0.8;
-  transition: 0.2s;
+.curr {
   color: white;
-  :hover {
-    opacity: 1;
+  background: #6c757d;
+  transition: 0.5s;
+  &:hover {
+    background: #28a745;
+    transition: 0.5s;
+  }
+}
+.calc {
+  color: white;
+  background: #6c757d;
+  transition: 0.5s;
+
+  &:hover {
+    background: #007bff;
+    transition: 0.5s;
+  }
+}
+.conv {
+  color: white;
+  background: #6c757d;
+  transition: 0.5s;
+  &:hover {
+    background: #dc3545;
+    transition: 0.5s;
   }
 }
 footer {

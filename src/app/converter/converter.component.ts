@@ -24,49 +24,34 @@ export class ConverterComponent implements OnInit {
     // document.execCommand('copy');
     copy((<HTMLInputElement>document.getElementById(id)).value);
   }
-  convertBajt(event) {
-
-    if (!event.key.match('[0-9]'))
-      event.preventDefault();
+  convertBajt() {
     this.KBInput = this.BInput / 1024;
     this.MBInput = this.KBInput / 1024;
     this.GBInput = this.MBInput / 1024;
     this.TBInput = this.GBInput / 1024;
   }
-  convertKilobajt(event) {
-
-    if (!event.key.match('[0-9]'))
-      event.preventDefault();
+  convertKilobajt() {
     this.BInput = this.KBInput * 1024;
     this.MBInput = this.KBInput / 1024;
     this.GBInput = this.MBInput / 1024;
     this.TBInput = this.GBInput / 1024;
 
   }
-  convertMegabajt(event) {
-
-    if (!event.key.match('[0-9]'))
-      event.preventDefault();
+  convertMegabajt() {
     this.KBInput = this.MBInput * 1024;
     this.BInput = this.KBInput * 1024;
     this.GBInput = this.MBInput / 1024;
     this.TBInput = this.GBInput / 1024;
   }
 
-  convertGigabajt(event) {
-
-    if (!event.key.match('[0-9]'))
-      event.preventDefault();
+  convertGigabajt() {
     this.TBInput = this.GBInput / 1024;
     this.MBInput = this.GBInput * 1024;
     this.KBInput = this.MBInput * 1024;
     this.BInput = this.KBInput * 1024;
   }
 
-  convertTerabajt(event) {
-
-    if (!event.key.match('[0-9]'))
-      event.preventDefault();
+  convertTerabajt() {
     this.GBInput = this.TBInput * 1024;
     this.MBInput = this.GBInput * 1024;
     this.KBInput = this.MBInput * 1024;

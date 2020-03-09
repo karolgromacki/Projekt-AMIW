@@ -11,6 +11,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { CurrencyPipePipe } from './currency-pipe.pipe';
+import { DigitOnlyModule } from '@uiowa/digit-only';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { CurrencyPipePipe } from './currency-pipe.pipe';
     FormsModule,
     AppRoutingModule,
     HttpClientModule,
+    DigitOnlyModule,
     TranslateModule.forRoot({
       loader: {
         provide: TranslateLoader,

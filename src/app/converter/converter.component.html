@@ -2,38 +2,43 @@
     <div class="mt-5">
         <div>
             <p class="mb-0 mt-4" translate>conv.text</p>
-            <input class="form-control d-inline-block col-9" type="number" placeholder="*{{'conv.text'|translate}}" maxlength="10" (keyup)="convertBajt($event)"
-                [(ngModel)]="BInput" id="userinputB">
-            <button class="btn btn-dark d-inline-block mb-1 p-2" title="{{'conv.copy'|translate}}" (click)="copyInputMessage('userinputB')"><i
-                    class="demo-icon icon-docs"></i></button>
+            <input class="form-control d-inline-block col-9" type="text" placeholder="*{{'conv.text'|translate}}"
+                (keyup)="convertBajt()" [(ngModel)]="BInput" id="userinputB" digitOnly decimal="true"
+                inputmode="numeric" decimalSeparator="." pattern="[0-9]+([.][0-9]+)?" maxlength="10">
+            <button class="btn btn-dark d-inline-block mb-1 p-2" title="{{'conv.copy'|translate}}"
+                (click)="copyInputMessage('userinputB')"><i class="demo-icon icon-docs"></i></button>
         </div>
         <div>
             <p class="mb-0 mt-4" translate>conv.text2</p>
-            <input class="form-control d-inline-block col-9" type="number" placeholder="*{{'conv.text2'|translate}}" maxlength="10"
-                (keyup)="convertKilobajt($event)" [(ngModel)]="KBInput" id="userinputKB">
-            <button class="btn btn-dark d-inline-block mb-1 p-2" title="{{'conv.copy'|translate}}" (click)="copyInputMessage('userinputKB')"><i
-                    class="demo-icon icon-docs"></i></button>
+            <input class="form-control d-inline-block col-9" type="text" placeholder="*{{'conv.text2'|translate}}"
+                (keyup)="convertKilobajt()" [(ngModel)]="KBInput" id="userinputKB" digitOnly decimal="true"
+                inputmode="numeric" decimalSeparator="." pattern="[0-9]+([.][0-9]+)?" maxlength="10">
+            <button class="btn btn-dark d-inline-block mb-1 p-2" title="{{'conv.copy'|translate}}"
+                (click)="copyInputMessage('userinputKB')"><i class="demo-icon icon-docs"></i></button>
 
         </div>
         <div>
             <p class="mb-0 mt-4" translate>conv.text3</p>
-            <input class="form-control d-inline-block col-9" type="number" placeholder="*{{'conv.text3'|translate}}" maxlength="10"
-                (keyup)="convertMegabajt($event)" [(ngModel)]="MBInput" id="userinputMB">
-            <button class="btn btn-dark d-inline-block mb-1 p-2" title="{{'conv.copy'|translate}}" (click)="copyInputMessage('userinputMB')"><i
-                    class="demo-icon icon-docs"></i></button>
+            <input class="form-control d-inline-block col-9" type="text" placeholder="*{{'conv.text3'|translate}}"
+                (keyup)="convertMegabajt()" [(ngModel)]="MBInput" id="userinputMB" digitOnly decimal="true"
+                inputmode="numeric" decimalSeparator="." pattern="[0-9]+([.][0-9]+)?" maxlength="10">
+            <button class="btn btn-dark d-inline-block mb-1 p-2" title="{{'conv.copy'|translate}}"
+                (click)="copyInputMessage('userinputMB')"><i class="demo-icon icon-docs"></i></button>
         </div>
         <div>
             <p class="mb-0 mt-4" translate>conv.text4</p>
-            <input class="form-control d-inline-block col-9" type="number" placeholder="*{{'conv.text4'|translate}}" maxlength="10"
-                (keyup)="convertGigabajt($event)" [(ngModel)]="GBInput" id="userinputGB">
-            <button class="btn btn-dark d-inline-block mb-1 p-2" title="{{'conv.copy'|translate}}" (click)="copyInputMessage('userinputGB')"><i
-                    class="demo-icon icon-docs"></i></button>
+            <input class="form-control d-inline-block col-9" type="text" placeholder="*{{'conv.text4'|translate}}"
+                (keyup)="convertGigabajt()" [(ngModel)]="GBInput" id="userinputGB" digitOnly decimal="true"
+                inputmode="numeric" decimalSeparator="." pattern="[0-9]+([.][0-9]+)?" maxlength="10">
+            <button class="btn btn-dark d-inline-block mb-1 p-2" title="{{'conv.copy'|translate}}"
+                (click)="copyInputMessage('userinputGB')"><i class="demo-icon icon-docs"></i></button>
         </div>
         <div>
             <p class="mb-0 mt-4" translate>conv.text5</p>
-            <input class="form-control d-inline-block col-9" type="number" placeholder="*{{'conv.text5'|translate}}" maxlength="10"
-                (keyup)="convertTerabajt($event)" [(ngModel)]="TBInput" id="userinputB">
-            <button class="btn btn-dark d-inline-block mb-1 p-2" title="{{'conv.copy'|translate}}" (click)="copyInputMessage('userinputTB')"><i
-                    class="demo-icon icon-docs"></i></button>
+            <input class="form-control d-inline-block col-9" type="text" placeholder="*{{'conv.text5'|translate}}"
+                (keyup)="convertTerabajt()" [(ngModel)]="TBInput" id="userinputB" digitOnly decimal="true"
+                inputmode="numeric" decimalSeparator="." pattern="[0-9]+([.][0-9]+)?" maxlength="10">
+            <button class="btn btn-dark d-inline-block mb-1 p-2" title="{{'conv.copy'|translate}}"
+                (click)="copyInputMessage('userinputTB')"><i class="demo-icon icon-docs"></i></button>
         </div>
     </div>
