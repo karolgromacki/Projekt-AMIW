@@ -76,6 +76,8 @@ export class CalculatorComponent implements OnInit {
       this.getOperation();
     }
   }
+
+
   getOperation() {
     if (sessionStorage.getItem('operation') === null) {
       this.history = "";

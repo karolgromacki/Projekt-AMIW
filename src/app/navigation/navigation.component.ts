@@ -8,19 +8,35 @@ import { TranslateService } from '@ngx-translate/core';
 })
 export class NavigationComponent implements OnInit {
   public trans = false;
-  public wonderId = "PL";
+  public lang = "";
   constructor(private translate: TranslateService) {
-    translate.setDefaultLang('pl');
-  }
+    this.translate.setDefaultLang('pl');
+  }s
 
   ngOnInit(): void {
+     this.getLang();
   }
   useLanguage(language: string) {
-    this.translate.use(language);
-    if (language == 'en') {
+    this.lang=language;
+    this.translate.use(this.lang);
+    if (this.lang == 'en') {
       this.trans = true;
+      localStorage.setItem('img', JSON.stringify(this.trans));
+      localStorage.setItem('lang', JSON.stringify(this.lang));
     }
     else
       this.trans = false;
+      localStorage.setItem('img', JSON.stringify(this.trans));
+      localStorage.setItem('lang', JSON.stringify(this.lang));
+  }
+  getLang() {
+    if (localStorage.getItem('lang') === null && localStorage.getItem('img') === null) {
+      this.trans = false;
+    }
+    else {
+      this.lang = JSON.parse(localStorage.getItem('lang'));
+      this.trans = JSON.parse(localStorage.getItem('img'));
+      this.translate.use(this.lang);
+    }
   }
 }

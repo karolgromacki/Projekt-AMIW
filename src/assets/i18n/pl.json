@@ -2,7 +2,7 @@
     "navi": {
         "calc": "Kalkulator",
         "curr": "Przelicznik walut",
-        "conv": "Konwerter jednostek pamięci"
+        "conv": "Konwerter jednostek"
     },
     "curr": {
         "text": "Wpisz kwotę którą chcesz wymienić:",
